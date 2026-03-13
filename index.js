@@ -1,5 +1,6 @@
 import express from 'express'
 import Bancos from './DB/bancos.js';
+import cors from 'cors'
 
 const servidor = express();
 const PORT = 3000
@@ -7,6 +8,7 @@ const PORT = 3000
 // MIDDLEWARE
 
 servidor.use(express.json())
+servidor.use(cors())
 
 // ROUTERS
 
